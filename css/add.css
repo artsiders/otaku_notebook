@@ -1,0 +1,143 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	font-family: sans-serif;
+	background: linear-gradient(to left bottom, #9f3737, #4b4bb7);
+	overflow: hidden;
+}
+.container_form{
+	width: 40%;
+}
+.container_form form{
+	background: linear-gradient(to top right,#2d1c53,#c11f1f);
+    display: grid;
+    grid-template: auto/ 20% 76%;
+    grid-gap: 20px;
+    padding: 30px;
+	color: white;
+	width: 100%;
+	animation: load .3s ease-in-out;
+
+}
+#name, #state, #note, #valuation{
+	height: 30px;
+	outline: none;
+	border: none;
+	padding: 0 10px;
+	box-shadow: 0 0 4px #000000ad inset;
+}
+#image{
+   	display: none;
+}
+.submit{
+	background: #620ec8;
+	border-radius: 5px;
+	border: none;
+	height: 35px;
+	color: white;
+	cursor: pointer;
+}
+.back{
+	background: #b5304d;
+	border-radius: 5px;
+	border: none;
+	height: 35px;
+	color: white;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.label_choise_photo{
+	background: linear-gradient(to right,#496bf0,#ae1d54);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    height: 40px;
+    width: 70%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.header button{
+	border: none;
+	width: 120px;
+	font-size: 18px;
+}
+.header input{
+	display: none;
+}
+.header .ajouter{
+	background-color: #ae1d54;
+}
+.footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.success_message{
+    grid-column: span 2;
+    background: linear-gradient(to left, #2dd698, #107d73);
+    color: #ffdfdf;
+    padding: 10px;
+    border-radius: 4px;
+    animation: successMessage 1.8s 1s ease-in-out;
+}
+.error_message{
+    grid-column: span 2;
+    background: linear-gradient(to left, #ff5650, #bf1e1e);
+    color: #ffdfdf;
+    padding: 10px;
+    border-radius: 4px;
+    animation: errorMessage 1.8s 1s ease-in-out;
+}
+.error_mode{
+	animation: errorChamp .6s .4s ease-in-out;
+}
+
+@media screen and (max-width: 700px){
+	body{
+		background: linear-gradient(to left, #9f3737, #4b4bb7);
+		overflow-y: scroll;
+	}
+	.container_form{
+		width: 85%;
+	}
+	.container_form form{
+		display: flex;
+		flex-direction: column;
+		margin-top: 600px;
+		margin-bottom: 200px;
+	}
+	.header{
+		position: absolute;
+	}
+	.footer{
+		position: absolute;
+		bottom: -400px;
+	}
+	.footer footer{
+		height: 160px;
+		color: white;
+		display: grid;
+		grid-template: 1fr 1fr 1fr/ 100%;
+	}
+	.header .ajouter{
+		background-color: transparent;
+	}
+}
